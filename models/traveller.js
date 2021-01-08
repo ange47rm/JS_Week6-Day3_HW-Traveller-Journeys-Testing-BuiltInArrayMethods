@@ -29,7 +29,7 @@ Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
   const totalDistanceTravelled = this.journeys.reduce ((totalDistance, currentJourney) => {
-    return totalDistance += currentJourney.distance;
+    return totalDistance + currentJourney.distance;
   },0);
   return totalDistanceTravelled;
 };
